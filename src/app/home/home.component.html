@@ -1,0 +1,53 @@
+<div class="flex w-full min-h-screen p-2 gap-2 ">
+    <div class="bg-black w-60 text-white  ">
+        <div class="flex items-start flex-col gap-3">
+            <div class="py-1 text-xl flex justify-center w-full font-bold">
+                <p>{{title}}</p>
+            </div>
+            <div class="flex gap-2 justify-start w-full pl-3">
+                <img class="w-12 h-12 bg-white rounded-full border-2 border-red-500 object-cover" src="" alt="">
+                <div>
+                    <p>Mani<p>
+                    <p class="font-bold">Admin</p>
+                </div>
+                
+            </div>
+            <div class="px-3">
+                    <p class="font-bold">Feature</p>
+                    
+                        <div *ngFor="let i of list" class="p-3 ">
+                            <a href="#home">{{i}}</a>
+                        </div>
+                    
+                </div>
+        </div>
+    </div>
+    
+
+    <div class=" w-full bg-gray-300 overflow-hidden">
+        <!-- nav -->
+        <div class="flex w-full justify-between px-3 py-2  mb-3 ">
+        <p>list</p>
+        <div>
+            <select class="bg-blue-500 text-white p-2 px-4 rounded-l "  >
+                <option value="All Candidate" >All Candidate</option>
+            </select>
+            <input type="text" class="p-2 px-4 rounded-r" placeholder="search...">
+        </div>
+        <div class="flex gap-3 items-center">
+            <div *ngFor="let icon of icons" class="flex items-center justify-center w-12 h-12 shadow-md rounded-full">
+    <i [class]="icon.class"></i>
+  </div>
+
+        </div>
+    </div>
+     <div class="flex w-full gap-3 flex-col">
+            <p class="my-3 font-bold">Dashboard</p>
+            <div class="flex gap-4 overflow-hidden">
+                <div *ngFor="let i of Dashboard"></div>
+            </div>
+        </div>
+
+        <router-outlet/>
+    </div>
+</div>
