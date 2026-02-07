@@ -1,1 +1,28 @@
-<p>nav-bar works!</p>
+
+    <div class="bg-black w-60 h-full text-white  ">
+        <div class="flex items-start flex-col gap-3">
+            <div class="py-1 text-xl flex justify-center w-full font-bold">
+                <p>{{title}}</p>
+            </div>
+            <div class="flex gap-2 justify-start w-full pl-3">
+                <img class="w-12 h-12 bg-white rounded-full border-2 border-red-500 object-cover" src="" alt="">
+                <div>
+                    <p>Mani<p>
+                    <p class="font-bold">Admin</p>
+                </div>
+                
+            </div>
+            <div class="px-3">
+                    <p class="font-bold">Feature</p>
+                    
+                        <div *ngFor="let i of list" class="p-3 ">
+                            <a routerLink={{i.rout}}>{{i.name}}</a>
+                        </div>
+                    
+                </div>
+        </div>
+    </div>
+    
+
+
+
