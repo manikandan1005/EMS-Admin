@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   title="StaHat";
-  list=["Message","jobs","Employes","Leave managament"]
+  list=["Message","jobs","Employes","Tasks","Leave managament"]
 icons = [
   { class: 'fa-regular fa-bell text-red-500 w-6 h-6' },
   { class: 'fa-solid fa-gear text-blue-500 w-6 h-6' },
@@ -18,6 +18,19 @@ icons = [
 
   Dashboard=[
     {
+      icon:'',
+      count:2,
+      name:'message'
+    },
+    {
+      icon:'',
+      count:2,
+      name:'message'
+    },{
+      icon:'',
+      count:2,
+      name:'message'
+    },{
       icon:'',
       count:2,
       name:'message'

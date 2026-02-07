@@ -43,8 +43,11 @@
     </div>
      <div class="flex w-full gap-3 flex-col">
             <p class="my-3 font-bold">Dashboard</p>
-            <div class="flex gap-4 overflow-hidden">
-                <div *ngFor="let i of Dashboard"></div>
+            <div class="flex gap-4  overflow-hidden">
+                <div class="h-[100px] w-60 rounded mx-2 bg-yellow-500" *ngFor="let i of Dashboard">
+                    <lucide-icon name="message-square" size="24"></lucide-icon>
+
+                </div>
             </div>
         </div>
 
