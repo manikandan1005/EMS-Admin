@@ -1,1 +1,31 @@
-<p>dashboard works!</p>
+<div>
+        <div class=" bg-gray-300 overflow-hidden min-h-screen">
+        <!-- nav -->
+        <div class="flex w-full justify-between px-3 py-2  mb-3 ">
+        <p>list</p>
+        <div>
+            <select class="bg-blue-500 text-white p-2 px-4 rounded-l "  >
+                <option value="All Candidate" >All Candidate</option>
+            </select>
+            <input type="text" class="p-2 px-4 rounded-r" placeholder="search...">
+        </div>
+        <div class="flex gap-3 items-center">
+            <div *ngFor="let icon of icons" class="flex items-center justify-center w-12 h-12 shadow-md rounded-full">
+    <i [class]="icon.class"></i>
+  </div>
+
+        </div>
+    </div>
+     <div class="flex w-full gap-3 flex-col">
+            <p class="my-3 font-bold">Dashboard</p>
+            <div class="flex gap-4  overflow-hidden">
+                <div class="h-[100px] w-60 rounded mx-2 bg-yellow-500" *ngFor="let i of Dashboard">
+                    <lucide-icon name="message-square" size="24"></lucide-icon>
+
+                </div>
+            </div>
+        </div>
+
+        <router-outlet/>
+    </div>
+</div>
