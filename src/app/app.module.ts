@@ -15,6 +15,9 @@ import { ProjectComponent } from './component/project/project.component';
 import { ProjectEmployeesComponent } from './component/project-employees/project-employees.component';
 import { LayoutComponent } from './component/layout/layout.component';
 import { FormsModule } from '@angular/forms';
+import { TaskComponent } from './component/task/task.component';
+import { JobComponent } from './component/job/job.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,11 +29,13 @@ import { FormsModule } from '@angular/forms';
     DashboardComponent,
     ProjectComponent,
     ProjectEmployeesComponent,
-    LayoutComponent
+    LayoutComponent,
+    TaskComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,
+    AppRoutingModule,FormsModule, HttpClientModule,
     // Pick icons you want to use
     LucideAngularModule.pick({
       Briefcase,
