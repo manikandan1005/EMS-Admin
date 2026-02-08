@@ -1,1 +1,36 @@
-<p>employee works!</p>
+<div class="flex gap-3 flex-col py-2 ">
+    <!-- nav -->
+     <div class="flex items-center justify-between">
+        <h1 class="text-2xl font-bold">Employee List</h1>
+        <div class="flex gap-6 mr-6">
+            <input type="text" class="p-3 border rounded focus:outline-none">
+            <button class="bg-blue-400 px-5 rounded text-white">Add</button>
+        </div>
+     </div>
+     <!-- table -->
+      <table class="border-collapse border-3 border-black">
+        <thead>
+            <tr >
+                <th class="p-3 border-2 border-black" *ngFor="let th of tableHeader">{{th}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employeeList" class=" p-2">
+                <td class="p-3 border-2 border-black">{{emp.employeeId}}</td>
+                <td class="p-3 border-2 border-black">{{emp.name}}</td>
+                <td class="p-3 border-2 border-black">{{emp.role}}</td>
+                <td class="p-3 border-2 border-black">{{emp.gender}}</td>
+                <td class="p-3 border-2 border-black">{{emp.emailId}}</td>
+                <td class="p-3 border-2 border-black">{{emp.address}}</td>
+                <td class="p-3 border-2 border-black">{{emp.workMode}}</td>
+                
+                <td class="p-3 border-2 border-black ">
+                    <span class="flex gap-2">
+                        <button class="bg-blue-400 text-white px-3 rounded py-2">edit</button>
+                    <button class="bg-red-600 text-white px-3 rounded py-2" (click)="remove(emp.employeeId)">remove</button> 
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+      </table>
+</div>
